@@ -4,6 +4,7 @@ const serverUrl = `http://${window.location.hostname}:3000`;
 
 export const getPermission = () => {
   Notification.requestPermission(function (status) {
+    window.alert("Result: " + status.toString())
     console.log('Notification permission status:', status);
   });
 };
